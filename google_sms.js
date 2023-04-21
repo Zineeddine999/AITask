@@ -1,4 +1,5 @@
 export async function pair_device(bot, params){
+	console.log(bot);
 	const page = await bot.browser.newPage();
 	await page.goto('https://messages.google.com/web/authentication');
 

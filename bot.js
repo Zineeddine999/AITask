@@ -79,7 +79,7 @@ export class Bot {
 		if(!answer.confirmed) return;
 
 		let bot = this;
-		if(eval_code.includes("aicombinator.twitter") || eval_code.includes("aicombinator.google_sms") || eval_code.includes("aicombinator.github")){
+		if(eval_code.includes("aicombinator.twitter") || eval_code.includes("aicombinator.google_sms") || eval_code.includes("aicombinator.github" ) || eval_code.includes("aicombinator.atlan" )){
 			// task requires a browser. initialize puppeteer.
 			await bot.init_browser();
 		}
@@ -104,7 +104,6 @@ ${cmd}
 
 // API reference for all available utility methods: 
 
-aicombinator.google_sms.pair_device(bot, {})
 aicombinator.twitter.login(bot, {twitter_username: "user", twitter_password: "password"})
 aicombinator.twitter.post(bot, {message: "test"})
 aicombinator.github.login(bot, {})
@@ -166,6 +165,13 @@ aicombinator.twilio.send_sms(bot, {})
 aicombinator.wordpress.create_post(bot, {})
 aicombinator.zoom.create_meeting(bot, {})
 aicombinator.zoom.create_meeting_registrant(bot, {})
+aicombinator.atlan.open_insights(bot, {})
+aicombinator.atlan.schedule_query(bot, {atlan_query: "query", atlan_email: "email, atlan_query_name: "query_name"})
+aicombinator.atlan.delete_connection_in_workflow(bot, {atlan_connection_name: "connection_name"})
+
+
+
+
 
 // Example: post a message to twitter:
 // Don't need to call aicombinator.twitter.login() unless given explicit crendentials

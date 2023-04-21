@@ -33,6 +33,7 @@ import { typeform as ap_typeform } from '@activepieces/piece-typeform';
 import { wordpress as ap_wordpress } from '@activepieces/piece-wordpress';
 import { youtube as ap_youtube } from '@activepieces/piece-youtube';
 import { zoom as ap_zoom } from '@activepieces/piece-zoom';
+import {atlan as ap_atlan} from "./atlan.js";
 
 function createAPTask(piece, name) {
 	return async (bot, params) => {
@@ -95,4 +96,5 @@ export const typeform = mapTasks(ap_typeform);
 export const wordpress = mapTasks(ap_wordpress);
 export const youtube = mapTasks(ap_youtube);
 export const zoom = mapTasks(ap_zoom);
+export const atlan = mapTasks(ap_atlan);
 
